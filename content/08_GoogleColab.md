@@ -176,72 +176,73 @@ Google Colab now features deep integration with Gemini AI, enabling powerful cod
 ### Example Data Science Prompt for Gemini
 
 ```
-Create a complete data science analysis notebook using the World Bank's CO2 emissions dataset. Please follow these specific requirements:
+Create a complete data science analysis notebook using the classic Iris flower dataset. Please follow these specific requirements:
 
 ## Data Source and Objective
-- Use pandas to load CO2 emissions data from the World Bank API or CSV
-- Focus on analyzing global CO2 emissions trends over the past 20 years
-- Compare emissions between different income groups and regions
+- Load the Iris dataset from: https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv
+- Analyze flower characteristics (sepal length, sepal width, petal length, petal width)
+- Compare differences between the three species: setosa, versicolor, and virginica
+- Create visualizations to understand species classification patterns
 
 ## Notebook Structure Requirements
 
 ### 1. Introduction (Text Cell)
 Create a markdown cell explaining:
 - The purpose of this analysis
-- Why CO2 emissions data is important
+- Background about the Iris dataset (1936 study by Ronald Fisher)
 - What questions we'll try to answer
-- Brief overview of the dataset source
+- Brief overview of the four flower measurements
 
 ### 2. Data Loading and Setup (Code Cell)
 - Import necessary libraries (pandas, matplotlib, seaborn, numpy)
-- Load the World Bank CO2 emissions dataset
-- Display basic information about the dataset
+- Load the Iris dataset from the provided URL using pandas
+- Display basic information about the dataset (shape, columns, data types)
 - Add comments explaining each step
 
 ### 3. Data Exploration (Code + Text Cells)
 - Create text cell explaining what we're exploring
 - Show dataset shape, columns, and data types
-- Display first/last few rows
-- Check for missing values
+- Display first and last few rows
+- Check for missing values and data quality
+- Show basic statistics (describe())
 - Add text cell summarizing key observations
 
-### 4. Data Cleaning (Code + Text Cells)
-- Text cell explaining cleaning strategy
-- Handle missing values appropriately
-- Filter data to relevant time period (2000-2020)
-- Clean country/region names if necessary
-- Text cell documenting cleaning decisions
+### 4. Data Overview Analysis (Code + Text Cells)
+- Text cell explaining our analysis approach
+- Count the number of samples per species
+- Check for any data quality issues
+- Verify that all measurements are positive numbers
+- Text cell documenting any data preparation decisions
 
 ### 5. Exploratory Data Analysis (Multiple Code + Text Cells)
 For each analysis, include explanatory text cells:
 
-a) Global CO2 Trends:
-- Plot global CO2 emissions over time
-- Calculate percentage changes
-- Text explanation of trends observed
+a) Species Distribution:
+- Create a count plot showing number of samples per species
+- Calculate basic statistics for each species
+- Text explanation of the balanced dataset
 
-b) Top Emitters Analysis:
-- Identify top 10 CO2 emitting countries
-- Create bar chart and trend lines
-- Text analysis of findings
+b) Feature Distributions:
+- Create histograms for each measurement (sepal length, sepal width, petal length, petal width)
+- Use different colors for each species
+- Text analysis of distribution patterns
 
-c) Regional Comparison:
-- Group by World Bank regions
-- Compare emission patterns
-- Create subplots for different regions
-- Text interpretation of regional differences
+c) Species Comparison:
+- Create box plots comparing measurements across species
+- Identify which features best distinguish between species
+- Text interpretation of differences between species
 
 ### 6. Advanced Visualizations (Code + Text Cells)
-- Create a heatmap of emissions by country/year
-- Plot emissions per capita vs total emissions
-- Add trend lines and correlation analysis
-- Text cells explaining visualization choices and insights
+- Create a pair plot (scatter plot matrix) showing all feature relationships
+- Create a correlation heatmap of the four measurements
+- Make a scatter plot of petal length vs petal width, colored by species
+- Text cells explaining visualization insights and patterns
 
 ### 7. Conclusions (Text Cell)
-- Summarize key findings
-- Discuss implications
-- Suggest further analysis directions
-- Acknowledge limitations
+- Summarize key findings about each species
+- Discuss which measurements are most useful for classification
+- Suggest what makes each species unique
+- Acknowledge any limitations of this simple analysis
 
 ## Visualization Requirements
 - Use matplotlib and/or seaborn for plots
