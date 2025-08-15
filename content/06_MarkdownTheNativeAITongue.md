@@ -47,8 +47,6 @@ def hello():
     print("Hello, World!")
 ```
 
-```
-
 ## Prominence in Coding Environments
 
 ### Documentation Standard
@@ -142,10 +140,9 @@ def hello():
 ## Function Definition
 The `calculate_average()` function takes a list of numbers:
 
-```python
 def calculate_average(numbers):
     return sum(numbers) / len(numbers)
-```
+
 
 **Key Points:**
 - Uses `sum()` built-in function
