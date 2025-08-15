@@ -1,4 +1,4 @@
-# Lab 01: Introduction to AI in Software Development
+# Introduction to Programming and CS I - Lab 01
 
 ## Overview
 
@@ -45,7 +45,7 @@ By the end of this lab, students will be able to:
    - Chatbot data collection practices
    - Personal privacy protection strategies
 
-6. **[Markdown as the Native AI Tongue](content/06_MarkdownAsNativeAITongue.md)**
+6. **[Markdown as the Native AI Tongue](content/06_MarkdownTheNativeAITongue.md)**
    - Understanding markdown syntax
    - Prominence in coding environments
    - Why AI models prefer markdown format
@@ -105,15 +105,6 @@ Work through the content modules in order, starting with the Introduction to AI.
 - **Google Colab Project**: Use Gemini AI to create a data science analysis
 - **AI Tool Exploration**: Try different AI coding assistants and compare their capabilities
 
-## Assignments and Exercises
-
-### Individual Activities
-
-1. **Repository Management**: Fork this repository and submit evidence of successful setup
-2. **Data Science Project**: Complete the Google Colab exercise with Gemini AI
-3. **AI Tool Comparison**: Write a brief comparison of different AI coding assistants
-4. **Workflow Application**: Apply the 4-step AI development workflow to a small project
-
 ### Discussion Topics
 
 - Ethical implications of AI training data usage
@@ -136,15 +127,6 @@ Work through the content modules in order, starting with the Introduction to AI.
 - [OpenAI Platform](https://platform.openai.com)
 - [Anthropic Claude](https://claude.ai)
 - [Google AI Studio](https://aistudio.google.com)
-
-## Assessment Criteria
-
-Students will be evaluated on:
-
-- **Understanding** (40%): Comprehension of AI concepts and their implications
-- **Practical Skills** (30%): Successful use of development tools and AI assistants
-- **Critical Thinking** (20%): Analysis of AI benefits, risks, and best practices
-- **Professional Workflow** (10%): Application of structured development processes
 
 ## Support and Help
 
@@ -203,6 +185,4 @@ Please respect intellectual property rights and cite sources appropriately when 
 
 ---
 
-**Last Updated**: August 2025  
-**Course**: COMP3083 - Advanced Software Development  
-**Institution**: Universidad del Turabo, Humacao Campus
+**Last Updated**: August 2025
