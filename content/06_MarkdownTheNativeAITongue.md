@@ -41,10 +41,10 @@
 
 **Code Blocks:**
 ```markdown
-```python
+\`\`\`python
 def hello():
     print("Hello, World!")
-```
+\`\`\`
 ```
 
 ## Prominence in Coding Environments
