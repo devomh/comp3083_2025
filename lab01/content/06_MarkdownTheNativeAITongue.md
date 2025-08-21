@@ -40,12 +40,14 @@
 ```
 
 **Code Blocks:**
-```markdown
+````
 ```python
 def hello():
-    print("Hello, World!")
+    print("Hello, World!")    
 ```
-```
+````    
+
+
 
 ## Prominence in Coding Environments
 
@@ -134,47 +136,6 @@ def hello():
 - Lists for step-by-step processes
 - Clear visual hierarchy
 
-### Examples of AI Markdown Usage
-**Code Explanation:**
-```markdown
-## Function Definition
-The `calculate_average()` function takes a list of numbers:
-
-```python
-def calculate_average(numbers):
-    return sum(numbers) / len(numbers)
-```
-
-**Key Points:**
-- Uses `sum()` built-in function
-- Divides by `len()` for average
-- Returns float result
-```
-
-**Problem-Solving Format:**
-```markdown
-# Solution Approach
-
-## Problem Analysis
-- Input: Array of integers
-- Output: Maximum sum subarray
-- Constraint: O(n) time complexity
-
-## Algorithm Steps
-1. Initialize variables
-2. Iterate through array
-3. Update maximum sum
-4. Return result
-
-## Implementation
-```python
-def max_subarray_sum(arr):
-    # Kadane's algorithm implementation
-    max_sum = current_sum = arr[0]
-    # ... rest of implementation
-```
-```
-
 ## The Feedback Loop Effect
 
 ### AI Training on Markdown
@@ -207,7 +168,7 @@ def max_subarray_sum(arr):
 
 ### Better Prompt Engineering
 **Structured Requests:**
-```markdown
+````
 # Task: Debug Python Function
 
 ## Current Code:
@@ -225,7 +186,7 @@ def broken_function():
 - Handle edge cases
 - Maintain original functionality
 - Add error handling
-```
+````
 
 **Clearer AI Responses:**
 - Organized information hierarchy
