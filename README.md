@@ -1,188 +1,64 @@
-# Introduction to Programming and CS I - Lab 01
+# Introduction to Programming and Computer Science I
 
-## Overview
+Welcome to the Introduction to Programming and Computer Science I course. This repository contains all lab materials and exercises for the course, with a focus on AI-assisted software development and modern programming practices.
 
-This lab provides a comprehensive introduction to artificial intelligence in software development, covering current AI technologies, their impact on programming careers, and practical tools for modern developers. Students will explore both the opportunities and challenges of AI-driven development while learning essential tools and workflows.
+## Course Overview
 
-## Learning Objectives
+This course provides students with a comprehensive foundation in programming and computer science fundamentals, while exploring the evolving landscape of AI-powered development tools and methodologies. Students will learn both traditional programming concepts and modern AI-assisted workflows that are reshaping the software development industry.
 
-By the end of this lab, students will be able to:
+## Labs
 
-- Understand the current state of AI and its applications in software development
-- Distinguish between different approaches to AI-assisted coding (vibe coding vs. professional workflows)
-- Analyze the impact of AI on software engineering careers
-- Understand data privacy implications of AI tools
-- Use essential development tools (Git, GitHub, Google Colab)
-- Work effectively with AI coding assistants and agents
-- Apply professional workflows for AI-driven development
+### Lab 01 - Introduction to AI in Software Development
+**[View Lab 01](lab01/README.md)**
 
-## Lab Structure
+A comprehensive introduction to artificial intelligence in software development, covering:
+- Current AI technologies and their applications in programming
+- AI-assisted coding approaches and professional workflows  
+- Impact of AI on software engineering careers
+- Essential development tools (Git, GitHub, Google Colab)
+- AI coding assistants and agents
+- Data privacy considerations in the AI age
 
-### Core Content Modules
+**Learning Objectives:**
+- Understand the current state of AI in software development
+- Learn professional AI-driven development workflows
+- Master essential development tools and platforms
+- Analyze career implications of AI in programming
 
-1. **[Introduction to AI](content/01_IntroAI.md)**
-   - Current state of frontier AI models
-   - AI chatbots revolution and societal impact
-   - Key trends and future developments
+---
 
-2. **[What is Vibe Coding](content/02_WhatIsVibeCoding.md)**
-   - History and origins of vibe coding
-   - Core workflow and different approaches
-   - Semantic drift problem in the industry
+## Course Structure
 
-3. **[Vibe Coding Gone Wrong](content/03_VibeCodingGoneWrong.md)**
-   - Major case studies and failures
-   - Systemic security risks
-   - Architectural problems and skill erosion
+Each lab is self-contained with its own README, content modules, references, and hands-on activities. Labs build upon each other, so it's recommended to complete them in order.
 
-4. **[AI Impact on Coding Careers](content/04_AIImpactOnCodingCareers.md)**
-   - "Coding is dead" vs. augmentation debate
-   - Historical patterns of technological evolution
-   - Future career strategies
+## Getting Started
 
-5. **[Data Privacy in the AI Age](content/05_DataPrivacyInAIAge.md)**
-   - Training data consent issues
-   - Chatbot data collection practices
-   - Personal privacy protection strategies
-
-6. **[Markdown as the Native AI Tongue](content/06_MarkdownTheNativeAITongue.md)**
-   - Understanding markdown syntax
-   - Prominence in coding environments
-   - Why AI models prefer markdown format
-
-### Essential Tools
-
-7. **[Git and GitHub](content/07_GitAndGithub.md)**
-   - Version control fundamentals
-   - Repository management
-   - Hands-on: Account creation and repository forking
-
-8. **[Google Colaboratory](content/08_GoogleColab.md)**
-   - Jupyter notebooks and data science
-   - Colab features and capabilities
-   - Hands-on: AI-powered data analysis project
-
-9. **[AI-Powered Coding Assistants](content/09_AICodingAssistants.md)**
-   - Types and capabilities of AI assistants
-   - Gemini CLI, Codex CLI, and Claude Code
-   - Best practices for effective collaboration
-
-10. **[AI Agents](content/10_AIAgents.md)**
-    - Definition and autonomous capabilities
-    - Google Jules and OpenAI Codex agents
-    - Differences from coding assistants
-
-### Professional Workflow
-
-11. **[Working with AI Assistants](content/11_WorkingWithAIAssistants.md)**
-    - Four-step professional development workflow
-    - Quality assurance and human oversight
-    - Team collaboration strategies
+1. **Fork this repository** to your own GitHub account
+2. **Clone your fork** to work locally (optional)
+3. **Navigate to lab01** to begin with the introduction to AI in software development
+4. **Follow each lab's README** for specific instructions and learning objectives
 
 ## Prerequisites
 
-- Basic understanding of programming concepts
+- Basic computer literacy
 - Google account (for Colab and other services)
 - Web browser with internet connection
 - Text editor or IDE (recommended: VS Code)
 
-## Getting Started
+## Support
 
-### Step 1: Fork This Repository
-
-1. Create a GitHub account if you don't have one
-2. Navigate to this lesson repository
-3. Click the "Fork" button to create your own copy
-4. Clone your fork to work locally (optional)
-
-### Step 2: Follow the Content Modules
-
-Work through the content modules in order, starting with the Introduction to AI. Each module builds upon previous concepts and prepares you for practical exercises.
-
-### Step 3: Complete Hands-On Activities
-
-- **GitHub Workflow**: Practice forking, cloning, and contributing to repositories
-- **Google Colab Project**: Use Gemini AI to create a data science analysis
-- **AI Tool Exploration**: Try different AI coding assistants and compare their capabilities
-
-### Discussion Topics
-
-- Ethical implications of AI training data usage
-- Career strategies in the AI-augmented development era
-- Best practices for maintaining code quality with AI assistance
-- Privacy considerations when using AI development tools
-
-## Resources
-
-### Reference Documents
-
-- `references/VibeCodingGoneWrong.md` - Detailed analysis of vibe coding failures
-- `references/AIImpactOnCodingCareers.md` - Comprehensive career impact analysis
-- `references/AIDrivenDevelopmentWorkflow.md` - Professional workflow methodology
-
-### External Links
-
-- [Google Colaboratory](https://colab.research.google.com)
-- [GitHub](https://github.com)
-- [OpenAI Platform](https://platform.openai.com)
-- [Anthropic Claude](https://claude.ai)
-- [Google AI Studio](https://aistudio.google.com)
-
-## Support and Help
-
-### Getting Help
-
-- Review the content modules thoroughly before asking questions
-- Use the GitHub Issues feature for technical problems with the repository
-- Consult the reference documents for detailed explanations
+- Use GitHub Issues for technical problems with repositories
+- Review lab-specific README files for detailed instructions
 - Participate in class discussions and peer collaboration
-
-### Troubleshooting Common Issues
-
-**GitHub Access Issues:**
-- Ensure you're logged into the correct GitHub account
-- Check repository permissions and visibility settings
-- Verify your internet connection and browser settings
-
-**Google Colab Problems:**
-- Confirm you're signed into a Google account
-- Check if you've exceeded usage limits (wait or upgrade)
-- Try refreshing the browser or using incognito mode
-
-**AI Tool Access:**
-- Verify account status and subscription levels
-- Check service availability in your region
-- Review usage limits and rate restrictions
-
-## Course Integration
-
-This lab serves as the foundation for subsequent coursework in AI-assisted software development. Concepts and tools introduced here will be used throughout the course for:
-
-- Advanced AI programming techniques
-- Large-scale software project management
-- Professional development workflows
-- Industry best practices and ethical considerations
 
 ## Contributing
 
-This lab content is part of an active curriculum. Students and instructors are encouraged to:
-
+Students and instructors are encouraged to:
 - Report errors or unclear content via GitHub Issues
 - Suggest improvements or additional resources
 - Share successful project examples and case studies
-- Contribute to discussions and knowledge sharing
-
-## License and Usage
-
-This educational content is provided for academic use. Students may:
-
-- Use materials for learning and coursework
-- Fork and modify for personal projects
-- Share knowledge gained with others
-- Build upon concepts for future work
-
-Please respect intellectual property rights and cite sources appropriately when using content in other contexts.
 
 ---
 
+**Course**: Introduction to Programming and Computer Science I  
 **Last Updated**: August 2025
