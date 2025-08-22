@@ -158,24 +158,11 @@ Each problem provides:
 ### Getting Help
 
 - **Review content modules** thoroughly before attempting exercises
-- **Use the GitHub Issues feature** for technical problems with repositories
 - **Try the practice problems** step by step, testing small pieces of code
 - **Ask AI assistants** for error explanations using the provided prompt templates
 - **Participate in class discussions** and peer collaboration
 
 ### Troubleshooting Common Issues
-
-**Colab Access Problems:**
-- Verify you're signed into a Google account
-- Check internet connection stability
-- Try refreshing the browser or using incognito mode
-- Ensure repository URLs are correct and accessible
-
-**Python Execution Issues:**
-- Check for syntax errors like missing quotes or parentheses
-- Verify proper indentation (use spaces consistently)
-- Test with simple values before complex calculations
-- Read error messages carefully for line number information
 
 **Input/Output Problems:**
 - Remember that `input()` always returns strings
@@ -213,16 +200,6 @@ These concepts will be essential for:
 - Object-oriented programming principles
 - Large-scale software development projects
 
-## Contributing
-
-This lab content is part of an active curriculum. Students and instructors are encouraged to:
-
-- **Report errors or unclear content** via GitHub Issues
-- **Suggest additional practice problems** or real-world applications
-- **Share successful solution approaches** and debugging strategies
-- **Contribute to discussions** about best practices and alternative methods
-- **Provide feedback** on exercise difficulty and learning progression
-
 ## Assessment and Evaluation
 
 Students will be evaluated on:
@@ -232,6 +209,36 @@ Students will be evaluated on:
 - **Problem-Solving Skills**: Systematic approach to input-compute-output challenges
 - **Debugging Proficiency**: Identification and resolution of common errors
 - **Code Quality**: Clear variable names, proper formatting, and documentation
+
+## TODO: Preparation for Next Lab
+
+To prepare for the next lab session, students should complete the following tasks:
+
+### Required Setup
+
+1. **Create a GitHub Account**
+   - Visit [github.com](https://github.com) and sign up for a free account
+   - Choose a professional username (you'll use this throughout your career)
+   - Verify your email address
+
+2. **Install Miniconda**
+   - Download from [docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html)
+   - Choose the appropriate installer for your operating system
+   - Follow the installation wizard with default settings
+
+3. **Install Visual Studio Code**
+   - Download from [code.visualstudio.com](https://code.visualstudio.com)
+   - Install the Python extension from the Extensions marketplace
+   - Familiarize yourself with the interface
+
+### Getting Started Tips
+
+- **Test your installations** by opening a terminal and typing `python --version`
+- **Explore VS Code** features like the integrated terminal and file explorer
+- **Practice basic terminal commands** covered in this lab
+- **Bookmark** the Python and VS Code documentation for reference
+
+These tools will form the foundation of your local development environment for upcoming programming exercises.
 
 ## License and Usage
 

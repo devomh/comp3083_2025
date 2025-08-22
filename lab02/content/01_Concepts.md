@@ -60,10 +60,10 @@ command [options] [arguments]
 
 ### Examples
 ```bash
-ls -l /home/user          # List files in long format
+ls -l /                   # List files in long format
 python script.py          # Run a Python script
 mkdir my_project          # Create a directory
-cd Documents              # Change to Documents folder
+cd sample_data              # Change to Documents folder
 ```
 
 ### Best Practices
@@ -161,6 +161,16 @@ cd Documents              # Change to Documents folder
 - **Error Handling** - Graceful error reporting and recovery
 - **Module Loading** - Dynamic import of Python libraries
 - **Output Capture** - Display of results, prints, and visualizations
+
+### Python Session
+- **Definition**: The period during which a Python kernel remains active and maintains state
+- **Duration**: Spans from kernel startup to shutdown/restart
+- **State Persistence**: All variables, imports, and defined functions persist throughout the session
+- **Isolation**: Each session has its own isolated memory space
+- **Session Termination**: Session ends when:
+  - Kernel is restarted
+  - Notebook/environment is closed
+  - Runtime disconnects (timeout, crash, manual stop)
 
 ### Relationship to Interpreter
 - Kernel uses Python interpreter as its core engine
