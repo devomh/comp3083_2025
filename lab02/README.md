@@ -32,7 +32,7 @@ By the end of this lab, students will be able to:
 ### Interactive Notebooks
 
 2. **[Hello World Comparison](content/02_HelloWorld.ipynb)**
-   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/your-username/your-repo-name/blob/main/lab02/content/02_HelloWorld.ipynb)
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devomh/comp3083_2025/blob/main/lab02/content/02_HelloWorld.ipynb)
    - Opening GitHub notebooks in Google Colab
    - Terminal-based Python script creation
    - Jupyter notebook cell execution
@@ -41,7 +41,7 @@ By the end of this lab, students will be able to:
    - Error introduction and debugging strategies
 
 3. **[Basic Programming Workflow](content/03_BasicWorkflow.ipynb)**
-   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/your-username/your-repo-name/blob/main/lab02/content/03_BasicWorkflow.ipynb)
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devomh/comp3083_2025/blob/main/lab02/content/03_BasicWorkflow.ipynb)
    - User input handling with `input()` function
    - Variable assignment and data type conversion
    - Mathematical operations and expressions
