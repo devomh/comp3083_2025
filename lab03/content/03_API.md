@@ -6,7 +6,7 @@ An API is a set of rules that allows different software applications to communic
 
 ---
 
-## 3.1. Understanding APIs and HTTP Requests (15 minutes)
+## 3.1. Understanding APIs and HTTP Requests
 
 Most web APIs work using the HTTP protocol, the same protocol your browser uses to fetch websites. When we interact with an API, we are making an **HTTP request** to a specific URL (an "endpoint").
 
@@ -31,13 +31,13 @@ This format is called **JSON (JavaScript Object Notation)**. It is the standard 
 
 ---
 
-## 3.2. Weather API Implementation Project (45 minutes)
+## 3.2. Weather API Implementation Project
 
 **Project Goal**: Build a command-line weather checker application that fetches live data from the internet.
 
 We will use the [OpenWeatherMap API](https://openweathermap.org/api), a popular service for accessing weather data.
 
-### Step 1: OpenWeatherMap API Registration and Setup (10 minutes)
+### Step 1: OpenWeatherMap API Registration and Setup 
 
 **Complete Registration Walkthrough:**
 
@@ -123,7 +123,7 @@ python weather_checker.py
 **VS Code Integrated Terminal:**
 Use the same commands as above in VS Code's built-in terminal.
 
-### Step 2: Core Implementation (25 minutes)
+### Step 2: Core Implementation
 
 Now, let's build the application. In your `weather_app` project, open the `src/weather_checker.py` file and enter the following code. Read through the comments to understand how each part works.
 
@@ -212,11 +212,11 @@ if __name__ == "__main__":
 
 > **⭐ Best Practice: API Key Security**
 > 
-> In this lab, we place the API key directly in the script for simplicity. In any real-world application, you should **never** do this! Committing code with visible keys or passwords is a major security risk.
+> In this lab, we might place the API key directly in the script for simplicity. In any real-world application, you should **never** do this! Committing code with visible keys or passwords is a major security risk.
 > 
 > Professionals use **environment variables** or secret management tools to handle sensitive data. This involves storing the key outside the code and loading it in dynamically, ensuring it never gets exposed in your Git repository.
 
-### Step 3: Debugging and Enhancement (10 minutes)
+### Step 3: Debugging and Enhancement
 
 -   **Run Your Code**: Open the integrated terminal in VS Code, activate your `conda` environment (`conda activate lab03`), navigate to your `src` directory, and run the script: `python weather_checker.py`.
 -   **Debugging Practice**: VS Code has a powerful debugger. Try setting a breakpoint by clicking to the left of a line number in `get_weather`. Then press `F5` to start debugging. When the code pauses, you can inspect variables and step through the execution line by line.

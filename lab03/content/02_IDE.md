@@ -6,7 +6,7 @@ An IDE is much more than a text editor. It integrates a suite of tools—a code 
 
 ---
 
-## 2.1. VS Code Interface and Configuration (15 minutes)
+## 2.1. VS Code Interface and Configuration
 
 First, let's get familiar with the VS Code user interface.
 
@@ -34,7 +34,7 @@ A little setup now will save you a lot of time later.
 
 ---
 
-## 2.2. Essential Python Extensions (10 minutes)
+## 2.2. Essential Python Extensions
 
 Extensions are the superpowers of VS Code. Let's install the most critical ones for Python development.
 
@@ -55,7 +55,7 @@ Consider these optional but highly recommended extensions for a professional wor
 
 ---
 
-## 2.3. Virtual Environments & Package Management (20 minutes)
+## 2.3. Virtual Environments & Package Management
 
 In Lab 02, we discussed reproducibility. Virtual environments are the key to achieving it in a local environment.
 
@@ -95,7 +95,7 @@ Let's create and manage a virtual environment for this lab using `conda`.
 
 ---
 
-## 2.4. Python Project Organization (15 minutes)
+## 2.4. Python Project Organization
 
 Organizing your files professionally is crucial for projects of any size. Let's create a standard project structure.
 
@@ -142,7 +142,7 @@ __pycache__/
 
 ---
 
-## 2.5. Libraries and Function Definitions (10 minutes)
+## 2.5. Libraries and Function Definitions
 
 Before we build our weather app, let's review how to use libraries and define reusable functions—a concept we build upon from Lab 02.
 

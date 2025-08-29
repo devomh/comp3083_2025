@@ -48,22 +48,6 @@ By the end of this lab, students will be able to:
 -   A solid understanding of the input-compute-output paradigm.
 -   Familiarity with basic Python syntax, variables, and data types.
 
-## Assessment and Deliverables
-
-To complete this lab, you will need to submit the following:
-
--   **A functional weather checker application** that successfully fetches and displays data from the OpenWeatherMap API.
--   **A well-organized project structure** following the template provided in the lab materials.
--   **A `requirements.txt` file** listing all project dependencies.
--   **A complete project uploaded to a new repository on your personal GitHub account**, including a descriptive `README.md`.
-
-### Assessment Criteria
-
--   **Technical Implementation (40%)**: The application works as expected, integrates with the API, handles basic errors, and uses secure environment variables for API keys.
--   **Code Organization (25%)**: The project follows the specified file and folder structure.
--   **Documentation (20%)**: The repository includes a clear `README.md`, and the code uses meaningful variable names and comments.
--   **Problem Solving (15%)**: Demonstrated ability to debug issues and apply concepts to solve problems.
-
 ## Troubleshooting Common Issues
 
 -   **`conda` command not found**: This usually means Conda was not added to your system's PATH. Close and reopen your terminal. On Windows, use the "Anaconda Prompt" if available.
