@@ -21,31 +21,31 @@ By the end of this lab, students will be able to:
 
 ### Core Content Modules
 
-1. **Strings** - [📖 Guide](content/01_Strings.md) | [📓 Notebook](content/01_Strings.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO_NAME/blob/main/lab04/content/01_Strings.ipynb)
+1. **Strings** - [📖 Guide](content/01_Strings.md) | [📓 Notebook](content/01_Strings.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devomh/comp3083_2025/blob/main/lab04/content/01_Strings.ipynb)
    - String creation, indexing, and slicing techniques
    - Essential string methods for cleaning and processing text
    - Advanced formatting with f-strings and format methods
    - Practical applications: validation, parsing, and text analysis
 
-2. **Lists** - [📖 Guide](content/02_Lists.md) | [📓 Notebook](content/02_Lists.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO_NAME/blob/main/lab04/content/02_Lists.ipynb)
+2. **Lists** - [📖 Guide](content/02_Lists.md) | [📓 Notebook](content/02_Lists.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devomh/comp3083_2025/blob/main/lab04/content/02_Lists.ipynb)
    - List creation, modification, and organization methods
    - Indexing, slicing, and advanced list operations
    - List comprehensions for efficient data processing
    - Nested lists and complex data structure management
 
-3. **Dictionaries** - [📖 Guide](content/03_Dictionaries.md) | [📓 Notebook](content/03_Dictionaries.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO_NAME/blob/main/lab04/content/03_Dictionaries.ipynb)
+3. **Dictionaries** - [📖 Guide](content/03_Dictionaries.md) | [📓 Notebook](content/03_Dictionaries.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devomh/comp3083_2025/blob/main/lab04/content/03_Dictionaries.ipynb)
    - Dictionary fundamentals and key-value relationships
    - Dictionary methods, iteration, and comprehensions
    - Nested dictionaries for complex data representation
    - Practical applications in data management and configuration
 
-4. **Loops** - [📖 Guide](content/04_Loops.md) | [📓 Notebook](content/04_Loops.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO_NAME/blob/main/lab04/content/04_Loops.ipynb)
+4. **Loops** - [📖 Guide](content/04_Loops.md) | [📓 Notebook](content/04_Loops.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devomh/comp3083_2025/blob/main/lab04/content/04_Loops.ipynb)
    - For loops with range, enumerate, and multiple iterables
    - While loops for condition-based iteration
    - Loop control with break, continue, and else clauses
    - Practical patterns: accumulator, search, filter, and validation
 
-5. **JSON Data Handling** - [📖 Guide](content/05_JSON.md) | [📓 Notebook](content/05_JSON.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO_NAME/blob/main/lab04/content/05_JSON.ipynb)
+5. **JSON Data Handling** - [📖 Guide](content/05_JSON.md) | [📓 Notebook](content/05_JSON.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devomh/comp3083_2025/blob/main/lab04/content/05_JSON.ipynb)
    - Introduction to JSON format and its importance
    - Converting between Python objects and JSON strings
    - File operations for persistent data storage
@@ -112,10 +112,6 @@ jupyter lab
 # Or work with the practical problems directly
 python content/practical_problems.py
 ```
-
-### For GitHub Integration
-
-To use the Colab badges with your repository, replace `YOUR_USERNAME/YOUR_REPO_NAME` in the badge URLs with your actual GitHub username and repository name.
 
 ## Key Programming Concepts Reinforced
 
