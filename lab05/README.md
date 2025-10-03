@@ -51,7 +51,7 @@ By the end of this lab, students will be able to:
 #### **Module 1: JSON Basics and Syntax**
 **File**: [01_JSON_Basics.md](content/01_JSON_Basics.md) | **Notebook**: [01_JSON_Basics.ipynb](content/01_JSON_Basics.ipynb)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devomh/comp3083_2025/blob/main/lessons/lab05/content/01_JSON_Basics.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devomh/comp3083_2025/blob/main/lab05/content/01_JSON_Basics.ipynb)
 
 Foundation before code—master JSON's structure and syntax rules.
 
@@ -77,7 +77,7 @@ Foundation before code—master JSON's structure and syntax rules.
 #### **Module 2: JSON and Python Serialization**
 **File**: [02_JSON_Python.md](content/02_JSON_Python.md) | **Notebook**: [02_JSON_Python.ipynb](content/02_JSON_Python.ipynb)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devomh/comp3083_2025/blob/main/lessons/lab05/content/02_JSON_Python.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devomh/comp3083_2025/blob/main/lab05/content/02_JSON_Python.ipynb)
 
 Convert between Python objects and JSON using the `json` module.
 
@@ -102,7 +102,7 @@ Convert between Python objects and JSON using the `json` module.
 #### **Module 3: JSON Data Processing**
 **File**: [03_JSON_Data_Processing.md](content/03_JSON_Data_Processing.md) | **Notebook**: [03_JSON_Data_Processing.ipynb](content/03_JSON_Data_Processing.ipynb)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devomh/comp3083_2025/blob/main/lessons/lab05/content/03_JSON_Data_Processing.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devomh/comp3083_2025/blob/main/lab05/content/03_JSON_Data_Processing.ipynb)
 
 Real-world JSON manipulation—the skills you'll use daily.
 
