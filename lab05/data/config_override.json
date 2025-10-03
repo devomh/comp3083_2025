@@ -1,0 +1,14 @@
+{
+  "environment": "development",
+  "database": {
+    "host": "dev-db.example.com",
+    "pool_size": 5
+  },
+  "features": {
+    "dark_mode": true,
+    "beta_features": true
+  },
+  "security": {
+    "session_timeout": 7200
+  }
+}

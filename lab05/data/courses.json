@@ -1,0 +1,111 @@
+{
+  "department": "Computer Science",
+  "semester": "Fall 2025",
+  "courses": [
+    {
+      "code": "COMP1001",
+      "title": "Introduction to Computing",
+      "credits": 3,
+      "prerequisites": [],
+      "instructor": {
+        "name": "Dr. Sarah Johnson",
+        "email": "s.johnson@university.edu",
+        "office": "ENG-301"
+      },
+      "schedule": {
+        "days": ["Monday", "Wednesday"],
+        "time": "10:00-11:15",
+        "room": "ENG-105"
+      },
+      "enrollment": {
+        "capacity": 30,
+        "enrolled": 28,
+        "waitlist": 3
+      }
+    },
+    {
+      "code": "COMP2050",
+      "title": "Data Structures and Algorithms",
+      "credits": 4,
+      "prerequisites": ["COMP1001"],
+      "instructor": {
+        "name": "Prof. Michael Chen",
+        "email": "m.chen@university.edu",
+        "office": "ENG-405"
+      },
+      "schedule": {
+        "days": ["Tuesday", "Thursday"],
+        "time": "13:00-14:50",
+        "room": "ENG-210"
+      },
+      "enrollment": {
+        "capacity": 35,
+        "enrolled": 32,
+        "waitlist": 0
+      }
+    },
+    {
+      "code": "COMP3083",
+      "title": "Introduction to Programming and CS I",
+      "credits": 3,
+      "prerequisites": ["COMP1001", "MATH1050"],
+      "instructor": {
+        "name": "Dr. Emily Rodriguez",
+        "email": "e.rodriguez@university.edu",
+        "office": "ENG-308"
+      },
+      "schedule": {
+        "days": ["Monday", "Wednesday", "Friday"],
+        "time": "09:00-09:50",
+        "room": "ENG-120"
+      },
+      "enrollment": {
+        "capacity": 25,
+        "enrolled": 24,
+        "waitlist": 5
+      }
+    },
+    {
+      "code": "COMP4050",
+      "title": "Software Engineering",
+      "credits": 3,
+      "prerequisites": ["COMP2050", "COMP3083"],
+      "instructor": {
+        "name": "Prof. David Kim",
+        "email": "d.kim@university.edu",
+        "office": "ENG-410"
+      },
+      "schedule": {
+        "days": ["Tuesday", "Thursday"],
+        "time": "15:00-16:15",
+        "room": "ENG-305"
+      },
+      "enrollment": {
+        "capacity": 30,
+        "enrolled": 22,
+        "waitlist": 0
+      }
+    },
+    {
+      "code": "COMP4090",
+      "title": "Senior Capstone Project",
+      "credits": 3,
+      "prerequisites": ["COMP4050"],
+      "instructor": {
+        "name": "Dr. Sarah Johnson",
+        "email": "s.johnson@university.edu",
+        "office": "ENG-301"
+      },
+      "schedule": {
+        "days": ["Friday"],
+        "time": "14:00-16:50",
+        "room": "ENG-Lab3"
+      },
+      "enrollment": {
+        "capacity": 20,
+        "enrolled": 15,
+        "waitlist": 0
+      }
+    }
+  ]
+}

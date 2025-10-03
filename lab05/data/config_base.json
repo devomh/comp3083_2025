@@ -1,0 +1,27 @@
+{
+  "app_name": "Student Portal",
+  "version": "1.0",
+  "environment": "production",
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "students",
+    "pool_size": 10,
+    "timeout": 30
+  },
+  "features": {
+    "dark_mode": false,
+    "notifications": true,
+    "analytics": true,
+    "beta_features": false
+  },
+  "security": {
+    "session_timeout": 3600,
+    "max_login_attempts": 5,
+    "password_min_length": 8
+  },
+  "api": {
+    "rate_limit": 100,
+    "timeout": 5000
+  }
+}

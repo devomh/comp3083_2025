@@ -1,0 +1,78 @@
+{
+  "university": "Springfield University",
+  "semester": "Fall 2025",
+  "students": [
+    {
+      "id": "S001",
+      "name": "Alice Johnson",
+      "major": "Computer Science",
+      "year": 3,
+      "gpa": 3.8,
+      "credits": 90,
+      "courses": ["COMP3083", "MATH2050", "PHYS1010"]
+    },
+    {
+      "id": "S002",
+      "name": "Bob Smith",
+      "major": "Mathematics",
+      "year": 2,
+      "gpa": 3.6,
+      "credits": 60,
+      "courses": ["MATH2051", "STAT2010", "COMP1001"]
+    },
+    {
+      "id": "S003",
+      "name": "Charlie Davis",
+      "major": "Computer Science",
+      "year": 4,
+      "gpa": 3.9,
+      "credits": 120,
+      "courses": ["COMP4050", "COMP4090", "COMP3083"]
+    },
+    {
+      "id": "S004",
+      "name": "Diana Lee",
+      "major": "Physics",
+      "year": 3,
+      "gpa": 3.5,
+      "credits": 85,
+      "courses": ["PHYS3010", "MATH3050", "COMP2050"]
+    },
+    {
+      "id": "S005",
+      "name": "Eve Wilson",
+      "major": "Computer Science",
+      "year": 2,
+      "gpa": 3.75,
+      "credits": 65,
+      "courses": ["COMP2050", "MATH2050", "ENGL1020"]
+    },
+    {
+      "id": "S006",
+      "name": "Frank Brown",
+      "major": "Mathematics",
+      "year": 4,
+      "gpa": 3.95,
+      "credits": 115,
+      "courses": ["MATH4010", "MATH4020", "STAT3010"]
+    },
+    {
+      "id": "S007",
+      "name": "Grace Martinez",
+      "major": "Data Science",
+      "year": 3,
+      "gpa": 3.85,
+      "credits": 88,
+      "courses": ["COMP3083", "STAT2010", "MATH2051"]
+    },
+    {
+      "id": "S008",
+      "name": "Henry Zhang",
+      "major": "Computer Science",
+      "year": 1,
+      "gpa": 3.7,
+      "credits": 30,
+      "courses": ["COMP1001", "MATH1050", "ENGL1010"]
+    }
+  ]
+}

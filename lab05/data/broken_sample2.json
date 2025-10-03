@@ -1,0 +1,10 @@
+{
+  "product": "Laptop"
+  "price": 999.99,
+  "in_stock": true,
+  "specs": {
+    "cpu": "Intel i7",
+    "ram": "16GB",
+    "storage": "512GB SSD"
+  }
+}
