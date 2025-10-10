@@ -360,33 +360,6 @@ Write a script that:
 3. Prints: "The predicted age for [name] is [age]"
 4. Handles errors gracefully
 
-<details>
-<summary>Solution</summary>
-
-```python
-import requests
-
-name = input("Enter a name: ")
-url = f"https://api.agify.io?name={name}"
-
-try:
-    response = requests.get(url)
-
-    if response.status_code == 200:
-        data = response.json()
-        age = data.get('age')
-        if age:
-            print(f"The predicted age for {name} is {age}")
-        else:
-            print(f"No prediction available for {name}")
-    else:
-        print(f"Request failed: {response.status_code}")
-
-except requests.RequestException as e:
-    print(f"Error: {e}")
-```
-</details>
-
 ### Exercise 3: Nationality Predictor
 
 Use the `https://api.nationalize.io` API to predict nationality from a name.
@@ -410,88 +383,12 @@ Write a function that:
 2. Calls the API
 3. Prints the top 3 predicted countries with probabilities
 
-<details>
-<summary>Solution</summary>
-
-```python
-import requests
-
-def predict_nationality(name):
-    url = f"https://api.nationalize.io?name={name}"
-
-    try:
-        response = requests.get(url)
-
-        if response.status_code == 200:
-            data = response.json()
-            countries = data.get('country', [])
-
-            if countries:
-                print(f"\nTop predictions for '{name}':")
-                for i, country in enumerate(countries[:3], 1):
-                    prob = country['probability'] * 100
-                    print(f"  {i}. {country['country_id']}: {prob:.1f}%")
-            else:
-                print(f"No predictions for '{name}'")
-        else:
-            print(f"Request failed: {response.status_code}")
-
-    except requests.RequestException as e:
-        print(f"Error: {e}")
-
-# Test
-predict_nationality("Maria")
-predict_nationality("John")
-```
-</details>
-
 ### Exercise 4: Multi-API Data Combiner
 
 Combine data from two APIs:
 1. Get age prediction from `https://api.agify.io?name=NAME`
 2. Get nationality from `https://api.nationalize.io?name=NAME`
 3. Create a combined JSON object and print it
-
-<details>
-<summary>Solution</summary>
-
-```python
-import requests
-import json
-
-def get_name_info(name):
-    """Get comprehensive info about a name from multiple APIs."""
-
-    # Get age prediction
-    age_url = f"https://api.agify.io?name={name}"
-    age_response = requests.get(age_url)
-
-    # Get nationality prediction
-    nat_url = f"https://api.nationalize.io?name={name}"
-    nat_response = requests.get(nat_url)
-
-    # Combine results
-    result = {
-        "name": name,
-        "age": None,
-        "nationality": []
-    }
-
-    if age_response.status_code == 200:
-        age_data = age_response.json()
-        result['age'] = age_data.get('age')
-
-    if nat_response.status_code == 200:
-        nat_data = nat_response.json()
-        result['nationality'] = nat_data.get('country', [])[:3]
-
-    return result
-
-# Test
-info = get_name_info("Maria")
-print(json.dumps(info, indent=2))
-```
-</details>
 
 ---
 

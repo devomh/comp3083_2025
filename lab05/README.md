@@ -128,19 +128,26 @@ Real-world JSON manipulation—the skills you'll use daily.
 #### **Module 4: JSON Practice Problems**
 **File**: [04_JSON_Practice_Problems.py](content/04_JSON_Practice_Problems.py)
 
+⭐ **Complete these after finishing Modules 1-3 to test your mastery!**
+
 Comprehensive coding challenges to cement your skills.
 
 **10 Progressive Problems:**
 1. **Contact Card Creator** - Basic serialization
 2. **Course Catalog Builder** - Structured data creation
 3. **Student GPA Calculator** - File I/O and statistics
-4. **Inventory Tracker** - Class-based persistence (CRUD operations)
+4. **Inventory Manager** - Function-based persistence (CRUD operations)
 5. **Configuration Validator** - Schema validation
 6. **JSON Data Merger** - Multi-source integration
 7. **Nested Data Extractor** - Path-based navigation
 8. **JSON-Based Search Engine** - Flexible querying
 9. **CSV to JSON Converter** - Format transformation
 10. **Schema Validator (Advanced)** - Custom validation framework
+
+**Difficulty Progression:**
+- Problems 1-3: Reinforce Modules 1-2 concepts
+- Problems 4-7: Extend Module 3 concepts
+- Problems 8-10: Challenge problems with new techniques
 
 **Format**: Each problem includes:
 - Detailed specifications
@@ -151,7 +158,9 @@ Comprehensive coding challenges to cement your skills.
 ---
 
 #### **Module 5: Introduction to APIs**
-**File**: [05_API_Basics.md](content/05_API_Basics.md)
+**File**: [05_API_Basics.md](content/05_API_Basics.md) | **Notebook**: [05_API_Basics.ipynb](content/05_API_Basics.ipynb)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/devomh/comp3083_2025/blob/main/lab05/content/05_API_Basics.ipynb)
 
 Apply your JSON skills to consume real-world web APIs.
 

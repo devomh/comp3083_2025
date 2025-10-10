@@ -2,6 +2,8 @@
 JSON Practice Problems - Lab 05
 Introduction to Programming and Computer Science I
 
+⭐ COMPLETE THESE AFTER FINISHING MODULES 1-3 TO TEST YOUR MASTERY ⭐
+
 This file contains 10 progressive JSON manipulation problems
 designed to build mastery of JSON processing in Python.
 
@@ -12,12 +14,17 @@ Instructions:
 4. Solutions are provided but try solving on your own first!
 
 Topics covered:
-- JSON serialization and deserialization
-- Nested structure navigation
-- Data filtering and transformation
-- File I/O with JSON
-- Data validation
-- Merging and restructuring
+- JSON serialization and deserialization (Modules 1-2)
+- Nested structure navigation (Module 3)
+- Data filtering and transformation (Module 3)
+- File I/O with JSON (Module 2)
+- Data validation (Advanced)
+- Merging and restructuring (Module 3)
+
+Problem difficulty progression:
+- Problems 1-3: Reinforce Modules 1-2 concepts
+- Problems 4-7: Extend Module 3 concepts
+- Problems 8-10: Challenge problems with new techniques
 """
 
 import json
@@ -122,11 +129,11 @@ def calculate_student_gpas(json_file_path):
 
 
 # ==============================================================================
-# PROBLEM 4: Inventory Tracker with Persistence
+# PROBLEM 4: Inventory Manager with Persistence (Functional Approach)
 # ==============================================================================
-class InventoryTracker:
+def load_inventory(filename):
     """
-    Manages product inventory with JSON persistence.
+    Load inventory from JSON file. Create new if doesn't exist.
 
     The inventory is stored as:
     {
@@ -136,42 +143,92 @@ class InventoryTracker:
         ...
       }
     }
+
+    Args:
+        filename (str): Path to JSON inventory file
+
+    Returns:
+        dict: Inventory dictionary with "products" key
     """
+    # TODO: Try to load from file, create new structure if file doesn't exist
+    # Hint: Use try/except for FileNotFoundError and json.JSONDecodeError
+    pass
 
-    def __init__(self, filename):
-        """Initialize with a JSON file. Create if doesn't exist."""
-        self.filename = filename
-        self.inventory = {"products": {}}
-        # TODO: Load existing inventory or create new file
-        pass
 
-    def add_product(self, product_id, name, quantity, price):
-        """Add a new product or update existing."""
-        # TODO: Implement
-        pass
+def save_inventory(inventory, filename):
+    """
+    Save inventory dictionary to JSON file.
 
-    def update_quantity(self, product_id, quantity_change):
-        """
-        Update product quantity (can be positive or negative).
-        Returns True if successful, False if product doesn't exist.
-        """
-        # TODO: Implement
-        pass
+    Args:
+        inventory (dict): Inventory dictionary to save
+        filename (str): Path to save JSON file
 
-    def get_product(self, product_id):
-        """Get product info. Returns None if not found."""
-        # TODO: Implement
-        pass
+    Returns:
+        bool: True if successful, False if error occurred
+    """
+    # TODO: Save with proper error handling
+    # Hint: Use try/except for IOError
+    pass
 
-    def total_inventory_value(self):
-        """Calculate total value of all inventory (price × quantity)."""
-        # TODO: Implement
-        pass
 
-    def save(self):
-        """Save current inventory to JSON file."""
-        # TODO: Implement with error handling
-        pass
+def add_product(inventory, product_id, name, quantity, price):
+    """
+    Add a new product or update existing product in inventory.
+
+    Args:
+        inventory (dict): Inventory dictionary (modified in place)
+        product_id (str): Unique product ID
+        name (str): Product name
+        quantity (int): Product quantity
+        price (float): Product price
+    """
+    # TODO: Add/update product in inventory['products']
+    pass
+
+
+def update_quantity(inventory, product_id, quantity_change):
+    """
+    Update product quantity (can be positive or negative).
+
+    Args:
+        inventory (dict): Inventory dictionary
+        product_id (str): Product ID to update
+        quantity_change (int): Amount to add (positive) or subtract (negative)
+
+    Returns:
+        bool: True if successful, False if product doesn't exist
+    """
+    # TODO: Check if product exists, update quantity, return True/False
+    pass
+
+
+def get_product(inventory, product_id):
+    """
+    Get product information.
+
+    Args:
+        inventory (dict): Inventory dictionary
+        product_id (str): Product ID to retrieve
+
+    Returns:
+        dict: Product info dict, or None if not found
+    """
+    # TODO: Return product or None
+    pass
+
+
+def calculate_total_value(inventory):
+    """
+    Calculate total value of all inventory (price × quantity for all products).
+
+    Args:
+        inventory (dict): Inventory dictionary
+
+    Returns:
+        float: Total inventory value
+    """
+    # TODO: Calculate sum of (price * quantity) for all products
+    pass
 
 
 # ==============================================================================
@@ -423,11 +480,27 @@ if __name__ == "__main__":
     print("(Requires test data file - see solution for details)")
 
     # Test Problem 4
-    print("\n--- Problem 4: Inventory Tracker ---")
+    print("\n--- Problem 4: Inventory Manager ---")
     try:
-        tracker = InventoryTracker("test_inventory.json")
-        print("Inventory tracker initialized")
-        # Add tests here after implementation
+        # Load or create inventory
+        inventory = load_inventory("test_inventory.json")
+        if inventory:
+            print("✓ Inventory loaded/created successfully")
+
+            # Test adding a product
+            add_product(inventory, "P001", "Laptop", 5, 999.99)
+            print("✓ Added product P001")
+
+            # Test saving
+            if save_inventory(inventory, "test_inventory.json"):
+                print("✓ Inventory saved successfully")
+
+            # Test calculating total value
+            total = calculate_total_value(inventory)
+            if total is not None:
+                print(f"✓ Total inventory value: ${total:.2f}")
+        else:
+            print("Not implemented yet")
     except Exception as e:
         print(f"Error: {e}")
 
@@ -485,310 +558,3 @@ if __name__ == "__main__":
     print("Test suite complete!")
     print("=" * 70)
 
-
-# ==============================================================================
-# SOLUTIONS (Scroll down to see solutions)
-# ==============================================================================
-
-
-"""
-SOLUTIONS - Try implementing on your own first!
-
---------------------------------------------------------------------------------
-SOLUTION 1: Contact Card Creator
---------------------------------------------------------------------------------
-def create_contact_card(name, email, phone, hobbies):
-    contact = {
-        "name": name,
-        "email": email,
-        "phone": phone,
-        "hobbies": hobbies
-    }
-    return json.dumps(contact, indent=2)
-
-
---------------------------------------------------------------------------------
-SOLUTION 2: Course Catalog Builder
---------------------------------------------------------------------------------
-def build_course_catalog(courses_list):
-    catalog = {
-        "courses": [
-            {
-                "code": code,
-                "title": title,
-                "credits": credits,
-                "prerequisites": prereqs
-            }
-            for code, title, credits, prereqs in courses_list
-        ]
-    }
-    return json.dumps(catalog, indent=2)
-
-
---------------------------------------------------------------------------------
-SOLUTION 3: Student GPA Calculator
---------------------------------------------------------------------------------
-def calculate_student_gpas(json_file_path):
-    try:
-        with open(json_file_path, 'r') as f:
-            data = json.load(f)
-
-        students = data['students']
-        gpas = [s['gpa'] for s in students]
-
-        return {
-            "total_students": len(students),
-            "average_gpa": round(sum(gpas) / len(gpas), 2),
-            "highest_gpa": max(gpas),
-            "lowest_gpa": min(gpas)
-        }
-    except (FileNotFoundError, json.JSONDecodeError, KeyError):
-        return None
-
-
---------------------------------------------------------------------------------
-SOLUTION 4: Inventory Tracker
---------------------------------------------------------------------------------
-class InventoryTracker:
-    def __init__(self, filename):
-        self.filename = filename
-        try:
-            with open(filename, 'r') as f:
-                self.inventory = json.load(f)
-        except (FileNotFoundError, json.JSONDecodeError):
-            self.inventory = {"products": {}}
-            self.save()
-
-    def add_product(self, product_id, name, quantity, price):
-        self.inventory['products'][product_id] = {
-            "name": name,
-            "quantity": quantity,
-            "price": price
-        }
-        self.save()
-
-    def update_quantity(self, product_id, quantity_change):
-        if product_id in self.inventory['products']:
-            self.inventory['products'][product_id]['quantity'] += quantity_change
-            self.save()
-            return True
-        return False
-
-    def get_product(self, product_id):
-        return self.inventory['products'].get(product_id)
-
-    def total_inventory_value(self):
-        return sum(
-            p['price'] * p['quantity']
-            for p in self.inventory['products'].values()
-        )
-
-    def save(self):
-        try:
-            with open(self.filename, 'w') as f:
-                json.dump(self.inventory, f, indent=2)
-        except IOError as e:
-            print(f"Error saving inventory: {e}")
-
-
---------------------------------------------------------------------------------
-SOLUTION 5: Configuration Validator
---------------------------------------------------------------------------------
-def validate_config(json_string):
-    errors = []
-
-    # Parse JSON
-    try:
-        config = json.loads(json_string)
-    except json.JSONDecodeError as e:
-        return False, [f"Invalid JSON: {e}"]
-
-    # Check app_name
-    if 'app_name' not in config:
-        errors.append("Missing required field: app_name")
-    elif not isinstance(config['app_name'], str):
-        errors.append("app_name must be a string")
-
-    # Check version
-    if 'version' not in config:
-        errors.append("Missing required field: version")
-    elif not isinstance(config['version'], str):
-        errors.append("version must be a string")
-    else:
-        parts = config['version'].split('.')
-        if len(parts) != 2 or not all(p.isdigit() for p in parts):
-            errors.append("version must be in format 'X.Y' where X and Y are numbers")
-
-    # Check debug
-    if 'debug' not in config:
-        errors.append("Missing required field: debug")
-    elif not isinstance(config['debug'], bool):
-        errors.append("debug must be a boolean")
-
-    # Check database
-    if 'database' not in config:
-        errors.append("Missing required field: database")
-    elif not isinstance(config['database'], dict):
-        errors.append("database must be an object")
-    else:
-        db = config['database']
-        if 'host' not in db:
-            errors.append("database.host is required")
-        elif not isinstance(db['host'], str):
-            errors.append("database.host must be a string")
-
-        if 'port' not in db:
-            errors.append("database.port is required")
-        elif not isinstance(db['port'], int):
-            errors.append("database.port must be an integer")
-        elif not (1 <= db['port'] <= 65535):
-            errors.append("database.port must be between 1 and 65535")
-
-        if 'name' not in db:
-            errors.append("database.name is required")
-        elif not isinstance(db['name'], str):
-            errors.append("database.name must be a string")
-
-    return (len(errors) == 0, errors)
-
-
---------------------------------------------------------------------------------
-SOLUTION 6: JSON Data Merger
---------------------------------------------------------------------------------
-def merge_json_files(file1_path, file2_path, output_path):
-    try:
-        with open(file1_path, 'r') as f:
-            data1 = json.load(f)
-        with open(file2_path, 'r') as f:
-            data2 = json.load(f)
-
-        # Create lookup by ID
-        merged_dict = {r['id']: r for r in data1['records']}
-
-        # Override/add from file2
-        for record in data2['records']:
-            merged_dict[record['id']] = record
-
-        # Convert back to list
-        merged = {"records": list(merged_dict.values())}
-
-        with open(output_path, 'w') as f:
-            json.dump(merged, f, indent=2)
-
-        return len(merged['records'])
-
-    except (FileNotFoundError, json.JSONDecodeError, KeyError):
-        return -1
-
-
---------------------------------------------------------------------------------
-SOLUTION 7: Nested Data Extractor
---------------------------------------------------------------------------------
-def extract_nested_field(data, field_path):
-    keys = field_path.split('.')
-    current = data
-
-    for key in keys:
-        if isinstance(current, dict):
-            current = current.get(key)
-            if current is None:
-                return None
-        else:
-            return None
-
-    return current
-
-
---------------------------------------------------------------------------------
-SOLUTION 8: JSON-Based Search Engine
---------------------------------------------------------------------------------
-def search_records(json_file_path, **search_criteria):
-    try:
-        with open(json_file_path, 'r') as f:
-            data = json.load(f)
-
-        records = data['records']
-
-        # Filter by all criteria
-        results = []
-        for record in records:
-            match = True
-            for key, value in search_criteria.items():
-                if key not in record or record[key] != value:
-                    match = False
-                    break
-            if match:
-                results.append(record)
-
-        return results
-
-    except (FileNotFoundError, json.JSONDecodeError, KeyError):
-        return []
-
-
---------------------------------------------------------------------------------
-SOLUTION 9: Data Format Converter
---------------------------------------------------------------------------------
-def convert_csv_to_json(csv_string, output_file):
-    try:
-        lines = csv_string.strip().split('\n')
-        if len(lines) < 2:
-            return False
-
-        headers = lines[0].split(',')
-        records = []
-
-        for line in lines[1:]:
-            values = line.split(',')
-            record = {headers[i]: values[i] for i in range(len(headers))}
-            records.append(record)
-
-        output = {"records": records}
-
-        with open(output_file, 'w') as f:
-            json.dump(output, f, indent=2)
-
-        return True
-
-    except Exception:
-        return False
-
-
---------------------------------------------------------------------------------
-SOLUTION 10: JSON Schema Validator
---------------------------------------------------------------------------------
-def validate_json_schema(data, schema):
-    errors = []
-
-    for field_name, rules in schema.items():
-        # Check required
-        if rules.get('required', False) and field_name not in data:
-            errors.append(f"Missing required field: {field_name}")
-            continue
-
-        # If field exists, validate type
-        if field_name in data:
-            value = data[field_name]
-            expected_type = rules['type']
-
-            type_map = {
-                'string': str,
-                'number': (int, float),
-                'boolean': bool,
-                'object': dict,
-                'array': list
-            }
-
-            if not isinstance(value, type_map[expected_type]):
-                errors.append(f"{field_name} must be of type {expected_type}")
-                continue
-
-            # Check ranges for numbers
-            if expected_type == 'number':
-                if 'min' in rules and value < rules['min']:
-                    errors.append(f"{field_name} must be >= {rules['min']}")
-                if 'max' in rules and value > rules['max']:
-                    errors.append(f"{field_name} must be <= {rules['max']}")
-
-    return (len(errors) == 0, errors)
-"""

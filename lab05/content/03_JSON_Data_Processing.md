@@ -593,45 +593,11 @@ catalog_json = '''
 
 Print: `"Laptop: $999.99"` for each product.
 
-<details>
-<summary>Solution</summary>
-
-```python
-import json
-
-catalog = json.loads(catalog_json)
-
-for product in catalog['products']:
-    print(f"{product['name']}: ${product['price']}")
-```
-</details>
-
 ### Exercise 2: Filter and Calculate
 
 Using the catalog above, find:
 1. All products under $100
 2. Total value of inventory (price × stock for each item)
-
-<details>
-<summary>Solution</summary>
-
-```python
-import json
-
-catalog = json.loads(catalog_json)
-products = catalog['products']
-
-# Products under $100
-affordable = [p for p in products if p['price'] < 100]
-print("Products under $100:")
-for p in affordable:
-    print(f"  - {p['name']}: ${p['price']}")
-
-# Total inventory value
-total_value = sum(p['price'] * p['stock'] for p in products)
-print(f"\nTotal inventory value: ${total_value:,.2f}")
-```
-</details>
 
 ### Exercise 3: Merge Student Records
 
@@ -659,36 +625,6 @@ contact_info = '''
 
 Create a merged structure with all information.
 
-<details>
-<summary>Solution</summary>
-
-```python
-import json
-
-basic = json.loads(basic_info)
-contacts = json.loads(contact_info)
-
-# Create contact lookup by ID
-contact_lookup = {c['id']: c for c in contacts['contacts']}
-
-# Merge
-merged_students = []
-for student in basic['students']:
-    student_id = student['id']
-    # Merge contact info if available
-    if student_id in contact_lookup:
-        contact = contact_lookup[student_id]
-        merged = {
-            **student,
-            "email": contact['email'],
-            "phone": contact['phone']
-        }
-        merged_students.append(merged)
-
-print(json.dumps(merged_students, indent=2))
-```
-</details>
-
 ### Exercise 4: Nested Data Extraction
 
 Extract the city names from this nested shipping data:
@@ -705,19 +641,6 @@ orders = '''
 '''
 ```
 
-<details>
-<summary>Solution</summary>
-
-```python
-import json
-
-data = json.loads(orders)
-
-cities = [order['shipping']['address']['city'] for order in data['orders']]
-print(f"Cities: {', '.join(cities)}")
-```
-</details>
-
 ### Exercise 5: Build a Search Function
 
 Create a function `search_movies(movies, **criteria)` that can filter by any combination of year, genre, or minimum rating.
@@ -727,46 +650,6 @@ Example usage:
 results = search_movies(movies, year=1994, min_rating=8.5)
 results = search_movies(movies, genre="Sci-Fi")
 ```
-
-<details>
-<summary>Solution</summary>
-
-```python
-def search_movies(movies, **criteria):
-    """
-    Search movies by flexible criteria.
-    Supported: year, genre, min_rating, director
-    """
-    results = movies
-
-    if 'year' in criteria:
-        results = [m for m in results if m['year'] == criteria['year']]
-
-    if 'genre' in criteria:
-        results = [m for m in results if criteria['genre'] in m['genres']]
-
-    if 'min_rating' in criteria:
-        results = [m for m in results if m['rating'] >= criteria['min_rating']]
-
-    if 'director' in criteria:
-        results = [m for m in results if m['director'] == criteria['director']]
-
-    return results
-
-# Test
-movies_data = json.loads(movies_json)['movies']
-
-results = search_movies(movies_data, year=1994, min_rating=8.5)
-print("1994 movies with rating >= 8.5:")
-for movie in results:
-    print(f"  - {movie['title']}: {movie['rating']}")
-
-results = search_movies(movies_data, genre="Sci-Fi", min_rating=8.7)
-print("\nSci-Fi movies with rating >= 8.7:")
-for movie in results:
-    print(f"  - {movie['title']}: {movie['rating']}")
-```
-</details>
 
 ---
 
