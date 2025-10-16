@@ -1,0 +1,52 @@
+{
+  "records": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "department": "Engineering",
+      "age": 28,
+      "salary": 75000,
+      "location": "New York"
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "department": "Marketing",
+      "age": 32,
+      "salary": 65000,
+      "location": "San Francisco"
+    },
+    {
+      "id": 3,
+      "name": "Charlie Davis",
+      "department": "Engineering",
+      "age": 25,
+      "salary": 70000,
+      "location": "New York"
+    },
+    {
+      "id": 4,
+      "name": "Diana Lee",
+      "department": "HR",
+      "age": 30,
+      "salary": 60000,
+      "location": "Boston"
+    },
+    {
+      "id": 5,
+      "name": "Eve Wilson",
+      "department": "Engineering",
+      "age": 28,
+      "salary": 80000,
+      "location": "Seattle"
+    },
+    {
+      "id": 6,
+      "name": "Frank Brown",
+      "department": "Sales",
+      "age": 35,
+      "salary": 72000,
+      "location": "San Francisco"
+    }
+  ]
+}

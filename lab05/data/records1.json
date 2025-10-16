@@ -1,0 +1,28 @@
+{
+  "records": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "email": "alice.j@example.com",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "email": "bob.s@example.com",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "name": "Charlie Davis",
+      "email": "charlie.d@example.com",
+      "status": "inactive"
+    },
+    {
+      "id": 5,
+      "name": "Eve Wilson",
+      "email": "eve.w@example.com",
+      "status": "active"
+    }
+  ]
+}

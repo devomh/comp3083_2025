@@ -1,0 +1,28 @@
+{
+  "records": [
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "email": "bob.smith@example.com",
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "name": "Charlie Davis",
+      "email": "charlie.davis@example.com",
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "name": "Diana Lee",
+      "email": "diana.l@example.com",
+      "status": "active"
+    },
+    {
+      "id": 6,
+      "name": "Frank Brown",
+      "email": "frank.b@example.com",
+      "status": "active"
+    }
+  ]
+}
