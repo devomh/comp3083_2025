@@ -1,0 +1,96 @@
+{
+  "students": [
+    {
+      "id": "12345",
+      "name": "Alice Johnson",
+      "email": "alice.johnson@university.edu",
+      "gpa": 3.8,
+      "major": "Computer Science",
+      "year": 3,
+      "courses": ["COMP3083", "MATH201", "PHYS101"],
+      "enrollment_date": "2023-08-15"
+    },
+    {
+      "id": "67890",
+      "name": "Bob Smith",
+      "email": "bob.smith@university.edu",
+      "gpa": 3.5,
+      "major": "Mathematics",
+      "year": 2,
+      "courses": ["MATH201", "STAT101", "COMP1101"],
+      "enrollment_date": "2024-01-10"
+    },
+    {
+      "id": "11223",
+      "name": "Charlie Davis",
+      "email": "charlie.davis@university.edu",
+      "gpa": 3.9,
+      "major": "Computer Science",
+      "year": 4,
+      "courses": ["COMP3083", "COMP4201", "MATH301"],
+      "enrollment_date": "2022-08-20"
+    },
+    {
+      "id": "44556",
+      "name": "Diana Martinez",
+      "email": "diana.martinez@university.edu",
+      "gpa": 3.7,
+      "major": "Data Science",
+      "year": 2,
+      "courses": ["COMP3083", "STAT201", "MATH201"],
+      "enrollment_date": "2024-01-10"
+    },
+    {
+      "id": "77889",
+      "name": "Eve Wilson",
+      "email": "eve.wilson@university.edu",
+      "gpa": 3.6,
+      "major": "Computer Science",
+      "year": 3,
+      "courses": ["COMP3083", "COMP3201", "ENG201"],
+      "enrollment_date": "2023-08-15"
+    }
+  ],
+  "courses": [
+    {
+      "code": "COMP3083",
+      "name": "Introduction to Programming",
+      "credits": 4,
+      "instructor": "Dr. Brown",
+      "enrolled_count": 4
+    },
+    {
+      "code": "MATH201",
+      "name": "Calculus II",
+      "credits": 4,
+      "instructor": "Dr. Green",
+      "enrolled_count": 3
+    },
+    {
+      "code": "PHYS101",
+      "name": "Physics I",
+      "credits": 4,
+      "instructor": "Dr. White",
+      "enrolled_count": 1
+    },
+    {
+      "code": "STAT101",
+      "name": "Statistics I",
+      "credits": 3,
+      "instructor": "Dr. Black",
+      "enrolled_count": 1
+    },
+    {
+      "code": "COMP1101",
+      "name": "Introduction to Computer Science",
+      "credits": 3,
+      "instructor": "Dr. Brown",
+      "enrolled_count": 1
+    }
+  ],
+  "metadata": {
+    "generated_date": "2025-10-16",
+    "version": "1.0",
+    "description": "Sample student and course data for Lab 06 exercises"
+  }
+}
