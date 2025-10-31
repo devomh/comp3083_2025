@@ -6,3 +6,8 @@ tmp/
 
 # XML files
 *.xml
+
+.venv/
+
+# Ignore cache files
+__pycache__/
