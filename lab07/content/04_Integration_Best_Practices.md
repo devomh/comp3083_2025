@@ -2,8 +2,6 @@
 
 ## Professional Workflows and Patterns
 
-**Estimated Time**: 35 minutes
-
 **Learning Objectives:**
 - Apply separation of concerns in GUI projects
 - Organize desktop applications professionally
