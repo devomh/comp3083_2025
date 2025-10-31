@@ -1,17 +1,3 @@
----
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.16.4
-  kernelspec:
-    display_name: base
-    language: python
-    name: python3
----
-
 # Module 2: Layout and UX Concepts
 
 ## Making UIs Professional and Usable
