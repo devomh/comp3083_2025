@@ -552,21 +552,6 @@ def validate_input(self):
 
 ---
 
-## Exercise 4: Convert the Data Visualizer
-
-**Task:** This is the big challenge! Convert the data visualizer from Module 2 to a desktop app.
-
-**Widgets needed:**
-- QComboBox for variable selection
-- QComboBox for statistic selection
-- QSlider for min/max percentiles
-- QPushButton to update
-- Consider how to display matplotlib plots (hint: look into `matplotlib.backends.backend_qtagg.FigureCanvasQTAgg`)
-
-**This is advanced!** Focus on getting the UI designed first, then add plotting.
-
----
-
 ## Best Practices
 
 ### DO:

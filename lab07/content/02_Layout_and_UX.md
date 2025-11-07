@@ -38,9 +38,6 @@ This works, but it's not professional or organized. **Solution: Layout container
 Arrange widgets side-by-side.
 
 ```python
-import ipywidgets as W
-from IPython.display import display
-
 first_name = W.Text(description='First:')
 last_name = W.Text(description='Last:')
 
@@ -58,9 +55,6 @@ display(name_row)
 Arrange widgets top-to-bottom (explicit vertical stacking).
 
 ```python
-import ipywidgets as W
-from IPython.display import display
-
 title = W.HTML('<h3>Contact Form</h3>')
 name = W.Text(description='Name:')
 email = W.Text(description='Email:')
@@ -80,9 +74,6 @@ display(form)
 Combine HBox and VBox to create complex layouts.
 
 ```python
-import ipywidgets as W
-from IPython.display import display
-
 # Title section
 title = W.HTML('<h3>Temperature Converter</h3>')
 
@@ -130,9 +121,6 @@ display(app)
 For more complex arrangements.
 
 ```python
-import ipywidgets as W
-from IPython.display import display
-
 # Create a calculator layout
 buttons = [
     [W.Button(description='7'), W.Button(description='8'), W.Button(description='9'), W.Button(description='/')],
@@ -146,7 +134,7 @@ flat_buttons = [btn for row in buttons for btn in row]
 
 grid = W.GridBox(
     flat_buttons,
-    layout=W.Layout(grid_template_columns='repeat(4, 120px)')
+    layout=W.Layout(grid_template_columns='repeat(4, 125px)')
 )
 
 display(W.VBox([
@@ -202,8 +190,6 @@ display(form)
 **Principle:** Users should know what's clickable and what's not.
 
 ```python
-import ipywidgets as W
-
 # Good: Clear button styles indicate purpose
 save_btn = W.Button(description='Save', button_style='success', icon='check')
 cancel_btn = W.Button(description='Cancel', button_style='danger', icon='times')
@@ -226,8 +212,6 @@ display(W.HBox([save_btn, cancel_btn, reset_btn]))
 **Principle:** Always let users know what happened.
 
 ```python
-import ipywidgets as W
-from IPython.display import display
 import time
 
 submit_btn = W.Button(description='Submit', button_style='primary')
@@ -264,9 +248,6 @@ display(submit_btn, feedback)
 **Principle:** Prevent errors before they happen. Guide users to correct input.
 
 ```python
-import ipywidgets as W
-from IPython.display import display
-
 email_input = W.Text(description='Email:', placeholder='user@example.com')
 validation_msg = W.HTML()
 submit_btn = W.Button(description='Submit', button_style='success', disabled=True)
@@ -296,9 +277,6 @@ display(email_input, validation_msg, submit_btn)
 **Principle:** Choose update timing based on operation cost.
 
 ```python
-import ipywidgets as W
-from IPython.display import display
-
 # Continuous: updates while dragging (cheap operations)
 slider_continuous = W.IntSlider(
     description='Continuous:',
@@ -339,8 +317,6 @@ display(slider_continuous, slider_discrete, output)
 Let's build a complete data science tool that combines everything we've learned.
 
 ```python
-import ipywidgets as W
-from IPython.display import display
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -570,9 +546,95 @@ display(W.Dropdown(description='Shipping:', options=['Standard', 'Express']))
 display(W.Checkbox(description='Gift wrap'))
 display(W.Button(description='Calculate Total'))
 display(W.Output())
-
-# Your improved layout here using HBox and VBox
 ```
+
+<!-- #region -->
+```
+┌─────────────────────────────────────────────┐
+│                 Order Form                  │
+├─────────────────────────────────────────────┤
+│  ┌──────────────────┐  ┌─────────────────┐  │
+│  │ Product: [____]  │  │ Quantity: [__]  │  │
+│  └──────────────────┘  └─────────────────┘  │
+│  ┌──────────────────┐  ┌─────────────────┐  │
+│  │ Price: [_____]   │  │ Shipping: [v]   │  │
+│  └──────────────────┘  └─────────────────┘  │
+│  [ ] Gift wrap                              │
+│  ┌──────────────────┐                       │
+│  │ Calculate Total  │                       │
+│  └──────────────────┘                       │
+│  ┌───────────────────────────────────────┐  │
+│  │              Output Area              │  │
+│  └───────────────────────────────────────┘  │
+└─────────────────────────────────────────────┘
+```
+
+You can use inline CSS in the HTML widget to center the title: 
+
+```python
+W.HTML('<h3 style="text-align: center;">Order Form</h3>')
+```
+<!-- #endregion -->
+
+```python
+# Your improved layout here using HBox and VBox
+
+```
+
+<!-- #region -->
+### The Layout Property
+
+Each widget has a `.layout` property that controls its size, spacing, and positioning:
+
+```python
+button = W.Button(description='Click Me')
+
+# Customize with layout
+button.layout = W.Layout(
+    width='200px',      # Fixed width (can be '50%', 'auto', or pixels)
+    height='40px',      # Fixed height (makes button more prominent)
+    margin='10px 0'     # Spacing: '10px top/bottom, 0 left/right'
+)
+```
+
+#### Common Layout Properties
+
+**Size Control:**
+```python
+widget.layout = W.Layout(
+    width='300px',         # Exact width in pixels
+    width='50%',           # Percentage of container width
+    width='auto',          # Let content determine width (default)
+    min_width='100px',     # Minimum width (prevents shrinking too small)
+    max_width='500px',     # Maximum width (prevents growing too large)
+    height='40px'          # Height (useful for buttons, text areas)
+)
+```
+**Spacing Control:**
+```python
+widget.layout = W.Layout(
+    margin='10px',             # 10px on all sides
+    margin='10px 20px',        # 10px top/bottom, 20px left/right
+    margin='10px 20px 15px',   # 10px top, 20px left/right, 15px bottom
+    margin='10px 20px 15px 5px', # top, right, bottom, left (clockwise)
+    padding='10px'             # Internal spacing (space inside widget)
+)
+```
+**Positioning & Alignment:**
+```python
+# Within a container (HBox/VBox)
+widget.layout = W.Layout(
+    align_self='center',       # Vertical alignment: 'flex-start' (top), 'center', 'flex-end' (bottom)
+    align_self='flex-start',   # Align to top of container
+    align_self='flex-end'      # Align to bottom of container
+)
+# For centering in a VBox
+button.layout = W.Layout(
+    width='200px',
+    margin='0 auto'            # '0' top/bottom, 'auto' left/right centers horizontally
+)
+```
+<!-- #endregion -->
 
 ---
 
@@ -588,12 +650,13 @@ display(W.Output())
 # Your code here
 ```
 
+<!-- #region -->
 ---
 
 ## Exercise 3: BMI Calculator with Visualization
 
 **Task:** Build a BMI calculator that:
-- Has inputs for weight (kg) and height (cm)
+- Has inputs for weight (lbs) and height (inches)
 - Uses sliders for input (realistic ranges)
 - Calculates BMI on button click
 - Shows result with color coding:
@@ -602,23 +665,51 @@ display(W.Output())
   - Overweight (25-30): orange
   - Obese (> 30): red
 
+**Hints:**
+- BMI formula (imperial): $\text{bmi} = \frac{ \text{weight} }{ \text{height}^2 } \times 703$
+- For color coding use an HTML Widget with value:
+
+```python
+  f'''<div style="border: 2px solid {color}; padding: 10px;">
+        <h3 style="color: {color};">BMI: {bmi:.1f}</h3>
+        <p style="color: {color};">{category}</p>
+      </div>
+  '''
+```
+<!-- #endregion -->
+
 ```python
 # Your code here
 ```
 
 ---
 
-## Exercise 4: Multi-Step Form
+## Exercise 4: Build a Functional Calculator
 
-**Task:** Create a multi-step form using layout:
-1. Step 1: Personal info (name, age)
-2. Step 2: Contact (email, phone)
-3. Step 3: Preferences (notifications checkbox, theme dropdown)
-4. "Next" buttons that validate before proceeding
-5. "Back" buttons to return to previous step
-6. Final "Submit" shows all collected data
+**Task:** Create a working calculator with this layout:
 
-**Hint:** Use a variable to track current step and update the displayed VBox.
+```
+Display: [___]
+
+ 7   8   9   /
+ 4   5   6   *
+ 1   2   3   -
+ 0   .   =   +
+     Clear    
+```
+
+**Behavior:**
+
+- All buttons except `=` and `Clear` append their symbol to the display
+- = button: Evaluates the expression using `eval()` and shows the result
+- Clear button: Clears the display
+
+**Hints:**
+
+- Use a Text widget (disabled) for the display
+- Use GridBox for the button layout
+- Update the display text with `display_widget.value = "new text"`
+- Use try/except to handle invalid expressions (e.g., "5//0" or "3++2")
 
 ```python
 # Your code here
