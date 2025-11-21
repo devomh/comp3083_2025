@@ -10,8 +10,6 @@
 - Choose appropriate chart types for different data
 - Work with NumPy arrays for data generation
 
-**Estimated Time**: 30 minutes
-
 ---
 
 ## Why Visualize Data?
@@ -288,10 +286,11 @@ import numpy as np
 # Student data
 study_hours = [2, 3, 4, 5, 6, 7, 8, 9]
 test_scores = [60, 65, 70, 75, 80, 85, 88, 92]
-attendance = [70, 75, 85, 90, 88, 95, 98, 100]  # Used for size
+attendance = [70, 75, 85, 90, 88, 95, 98, 100]
+sizes = [a * 5 for a in attendance]  # Scale sizes for visibility
 
 plt.scatter(study_hours, test_scores,
-            s=attendance*3,           # Size based on attendance
+            s=sizes,                  # Size based on attendance
             c=attendance,             # Color based on attendance
             cmap='viridis',           # Color map
             alpha=0.6,
@@ -357,34 +356,16 @@ plt.show()
 ```python
 import matplotlib.pyplot as plt
 
-# Temperature data
+# Temperature (°C) data
 days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 temperatures = [18, 20, 19, 22, 24, 23, 21]  # Temperatures in Celsius
 
-# Create line chart
-plt.plot(days, temperatures,
-         color='#FF6B35',
-         marker='o',
-         markersize=8,
-         linewidth=2)
+# Your code here
 
-# Customize chart
-plt.xlabel('Day of Week', fontsize=11)
-plt.ylabel('Temperature (°C)', fontsize=11)
-plt.title('Weekly Temperature Trend', fontsize=13, fontweight='bold')
-plt.grid(True, alpha=0.3)
-plt.xticks(rotation=45)  # Rotate labels for better fit
 
-# Display
 plt.tight_layout()  # Adjust spacing
 plt.show()
 ```
-
-**Bonus Challenges**:
-- Add a second line showing temperature in Fahrenheit (F = C × 9/5 + 32)
-- Add a horizontal line showing the average temperature
-- Color-code the line: blue for cold days (<20°C), red for warm days (≥20°C)
-- Show both actual and predicted temperatures
 
 ---
 
@@ -411,91 +392,14 @@ student_counts = [12, 18, 15, 8, 3]
 # Color scheme (green for good, red for poor)
 colors = ['#4CAF50', '#8BC34A', '#FFC107', '#FF9800', '#F44336']
 
-# Create bar chart
-plt.bar(grades, student_counts,
-        color=colors,
-        edgecolor='black',
-        linewidth=1.5)
+# Your code here
 
-# Customize chart
-plt.xlabel('Grade', fontsize=12)
-plt.ylabel('Number of Students', fontsize=12)
-plt.title('Class Grade Distribution', fontsize=14, fontweight='bold')
-plt.ylim(0, max(student_counts) + 5)  # Add space at top
-
-# Display
 plt.show()
-```
-
-**Bonus Challenges**:
-- Add value labels on top of each bar (use `plt.text()`)
-- Create a horizontal bar chart instead
-- Show percentage instead of counts
-- Compare two classes side by side (grouped bars)
-- Calculate and show the class average on the chart
-
----
-
-## Exercise 3: Correlation Scatter Plot 🔵
-
-**Goal**: Create a scatter plot showing the relationship between study hours and test scores.
-
-**Requirements**:
-- Plot study hours on x-axis
-- Plot test scores on y-axis
-- Use meaningful point sizes and colors
-- Add labels, title, and grid
-- Make the correlation visually clear
-
-**Starter Code**:
-
-```python
-import matplotlib.pyplot as plt
-
-# Student data
-study_hours = [1, 2, 2.5, 3, 4, 4.5, 5, 6, 7, 8]
-test_scores = [50, 55, 58, 62, 68, 72, 75, 82, 88, 92]
-
-# Create scatter plot
-plt.scatter(study_hours, test_scores,
-            color='#2196F3',
-            s=150,  # Point size
-            alpha=0.7,
-            edgecolors='black',
-            linewidths=2)
-
-# Customize chart
-plt.xlabel('Study Hours per Week', fontsize=12)
-plt.ylabel('Test Score (%)', fontsize=12)
-plt.title('Correlation: Study Time vs. Test Performance', fontsize=13, fontweight='bold')
-plt.grid(True, alpha=0.3)
-plt.xlim(0, 9)
-plt.ylim(40, 100)
-
-# Display
-plt.show()
-```
-
-**Bonus Challenges**:
-- Add a trend line (use `np.polyfit()` and `np.poly1d()`)
-- Vary point size based on a third variable (e.g., attendance)
-- Color points based on pass/fail threshold
-- Add text annotations for outliers
-- Show confidence interval around trend line
-
-**Hint for Trend Line**:
-```python
-import numpy as np
-# Calculate trend line
-z = np.polyfit(study_hours, test_scores, 1)  # 1 = linear fit
-p = np.poly1d(z)
-plt.plot(study_hours, p(study_hours), "r--", alpha=0.8, linewidth=2, label='Trend')
-plt.legend()
 ```
 
 ---
 
-## Exercise 4: Mathematical Functions 📉
+## Advanced: Mathematical Functions 📉
 
 **Goal**: Plot sine and cosine functions on the same chart to show their relationship.
 
@@ -535,13 +439,6 @@ plt.legend(fontsize=11)
 # Display
 plt.show()
 ```
-
-**Bonus Challenges**:
-- Add more trigonometric functions (tan, sec, etc.)
-- Mark special points (π/2, π, 3π/2, 2π) with vertical lines
-- Show phase relationship by plotting sin(x + π/2) vs cos(x)
-- Create subplots showing each function separately
-- Add annotations showing where functions intersect
 
 **Hint for Subplots**:
 ```python
@@ -729,6 +626,7 @@ plt.tight_layout()  # Adjust spacing
 
 ## Quick Reference
 
+<!-- #region -->
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -759,6 +657,7 @@ plt.show()
 # Save
 plt.savefig('chart.png', dpi=300, bbox_inches='tight')
 ```
+<!-- #endregion -->
 
 ---
 

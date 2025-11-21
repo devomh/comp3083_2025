@@ -9,8 +9,6 @@
 - Create your first canvas and draw basic shapes
 - Recognize the relationship between code and visual output
 
-**Estimated Time**: 15 minutes
-
 ---
 
 ## What Are Digital Graphics?
@@ -28,13 +26,9 @@ Think of a canvas as a piece of graph paper where:
 
 ## Setup: Installing Required Libraries
 
-Open a new Google Colab notebook and run this cell first:
-
 ```python
 # Install ipycanvas for drawing graphics
 !pip install ipycanvas
-
-print("✓ Installation complete!")
 ```
 
 Then import the libraries we'll use throughout this lab:
@@ -46,8 +40,6 @@ from ipycanvas import Canvas
 # For data visualization
 import matplotlib.pyplot as plt
 import numpy as np
-
-print("✓ All libraries imported successfully!")
 ```
 
 **Note**: You only need to install ipycanvas once per Colab session, but you must import libraries in each notebook.
@@ -65,6 +57,7 @@ Colors on screens are created by mixing three primary colors of light:
 
 Each component ranges from **0** (none) to **255** (maximum intensity).
 
+<!-- #region -->
 ```python
 # RGB examples - tuple format (red, green, blue)
 pure_red = (255, 0, 0)      # All red, no green or blue
@@ -80,11 +73,13 @@ magenta = (255, 0, 255)     # Red + Blue = Magenta
 
 gray = (128, 128, 128)      # Equal amounts of all three
 ```
+<!-- #endregion -->
 
 ### Hexadecimal Color Codes
 
 Colors can also be written in **hexadecimal** (base-16) format, commonly used in web development:
 
+<!-- #region -->
 ```python
 # Hexadecimal format: #RRGGBB
 # Each pair is a hex number from 00 (0) to FF (255)
@@ -96,6 +91,7 @@ Colors can also be written in **hexadecimal** (base-16) format, commonly used in
 '#000000'  # Black:   00=0,   00=0,   00=0
 '#FF6B35'  # Orange:  FF=255, 6B=107, 35=53
 ```
+<!-- #endregion -->
 
 **Quick Reference**:
 - `00` = 0
@@ -132,6 +128,7 @@ Computer graphics use a coordinate system where:
 
 On a 400×300 canvas:
 
+<!-- #region -->
 ```python
 (0, 0)       # Top-left corner
 (400, 0)     # Top-right corner
@@ -139,6 +136,7 @@ On a 400×300 canvas:
 (400, 300)   # Bottom-right corner
 (200, 150)   # Center of canvas
 ```
+<!-- #endregion -->
 
 ---
 
@@ -155,7 +153,7 @@ canvas.fill_style = '#2196F3'
 
 # Draw a filled rectangle
 # Syntax: fill_rect(x, y, width, height)
-canvas.fill_rect(50, 50, 200, 100)
+canvas.fill_rect(10, 10, 200, 100)
 
 # Display the canvas
 canvas
@@ -268,8 +266,6 @@ canvas.fill_rect(50, 130, 190, 40)  # Horizontal bar
 canvas
 ```
 
-**Challenge**: Can you spell your name or create a simple pattern?
-
 ---
 
 ## Key Concepts Summary
@@ -344,6 +340,7 @@ canvas.fill_style = 'rgb(255, 100, 50)'  # Valid
 canvas.fill_style = '#FF6432'
 ```
 
+<!-- #region -->
 ---
 
 ## Quick Reference Card
@@ -380,6 +377,7 @@ plt.title('Chart Title')
 plt.grid(True)
 plt.show()
 ```
+<!-- #endregion -->
 
 ---
 
@@ -389,7 +387,6 @@ Now that you understand the fundamentals of digital graphics, you're ready to:
 
 1. **Module 2**: Draw circles, lines, triangles, and create patterns with loops
 2. **Module 3**: Visualize data with different chart types
-3. **Module 4**: Combine techniques to create complete projects
 
 **Remember**: Every complex graphic starts with these simple building blocks!
 

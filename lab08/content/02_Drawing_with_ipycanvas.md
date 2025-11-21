@@ -9,8 +9,6 @@
 - Combine shapes to create complex designs
 - Understand how arrays control visual properties
 
-**Estimated Time**: 35 minutes
-
 ---
 
 ## Drawing Basic Shapes
@@ -42,9 +40,9 @@ canvas
 
 Circles are drawn using the `arc()` method. The syntax is:
 
-```python
-canvas.arc(center_x, center_y, radius, start_angle, end_angle)
-```
+
+`canvas.arc(center_x, center_y, radius, start_angle, end_angle)`
+
 
 **Important**: Angles are in **radians**, not degrees!
 - Full circle = 2π radians ≈ 6.28
@@ -314,15 +312,15 @@ canvas
 
 ---
 
-## Exercise 1: Simple House 🏠
+## Exercise 1: Simple House
 
 **Goal**: Draw a simple house using rectangles and a triangle.
 
 **Requirements**:
 - House body (rectangle)
 - Roof (triangle using path)
-- At least one door (rectangle)
-- At least two windows (rectangles or circles)
+- One door on the left side (rectangle)
+- One window on the right side (circle)
 - Use at least 4 different colors
 
 **Starter Code**:
@@ -337,16 +335,10 @@ canvas = Canvas(width=400, height=400)
 # 1. Draw house body
 # 2. Draw roof
 # 3. Draw door
-# 4. Draw windows
+# 4. Draw window
 
 canvas
 ```
-
-**Bonus Challenges**:
-- Add a chimney with smoke (circles)
-- Draw a sun or moon
-- Add trees (triangles or circles)
-- Create a path to the door (lines or rectangles)
 
 ---
 
@@ -371,29 +363,11 @@ canvas = Canvas(width=400, height=400)
 
 square_size = 50  # Each square is 50×50 pixels
 
-for row in range(8):
-    for col in range(8):
-        # Calculate position
-        x = col * square_size
-        y = row * square_size
-
-        # Determine color based on position
-        if (row + col) % 2 == 0:
-            canvas.fill_style = '#FFFFFF'  # White
-        else:
-            canvas.fill_style = '#000000'  # Black
-
-        # Draw the square
-        canvas.fill_rect(x, y, square_size, square_size)
+# Your code here:
+# Use nested loops to draw the 8×8 checkerboard pattern
 
 canvas
 ```
-
-**Bonus Challenges**:
-- Use different colors (not just black and white)
-- Add a border around the entire board
-- Make the squares smaller (10×10 grid)
-- Add alternating colored borders to each square
 
 ---
 
@@ -424,112 +398,11 @@ cols = 6
 spacing = 60  # Space between circle centers
 radius = 20
 
-for row in range(rows):
-    for col in range(cols):
-        # Calculate position
-        x = 50 + col * spacing
-        y = 50 + row * spacing
-
-        # Choose color by cycling through the array
-        color_index = (row * cols + col) % len(colors)
-        canvas.fill_style = colors[color_index]
-
-        # Draw circle
-        canvas.fill_arc(x, y, radius, 0, 2 * math.pi)
+# Your code here:
+# Use nested loops to draw the grid of colored circles
 
 canvas
 ```
-
-**Bonus Challenges**:
-- Make circle size vary by position (larger in center, smaller at edges)
-- Create a rainbow pattern (colors change gradually)
-- Add a black outline to each circle
-- Make circles only appear in a specific pattern (e.g., diagonal)
-
----
-
-## Exercise 4: Color Gradient 🌈
-
-**Goal**: Create a smooth color gradient using loops and mathematical color transitions.
-
-**Requirements**:
-- Create at least 20 vertical bars
-- Smoothly transition from one color to another
-- Each bar should be a different color
-- Use RGB color values calculated mathematically
-
-**Starter Code**:
-
-```python
-from ipycanvas import Canvas
-
-canvas = Canvas(width=400, height=300)
-
-num_bars = 40
-bar_width = 400 / num_bars
-
-for i in range(num_bars):
-    # Calculate color values (0 to 255)
-    # This creates a gradient from cyan to magenta
-    red = int(i * 255 / (num_bars - 1))
-    green = 0
-    blue = int(255 - i * 255 / (num_bars - 1))
-
-    # Set color and draw bar
-    canvas.fill_style = f'rgb({red}, {green}, {blue})'
-    canvas.fill_rect(i * bar_width, 0, bar_width, 300)
-
-canvas
-```
-
-**Understanding the Math**:
-- `i` goes from 0 to (num_bars - 1)
-- `i / (num_bars - 1)` gives values from 0.0 to 1.0
-- Multiply by 255 to get RGB range (0-255)
-- `int()` converts to integer (required for RGB)
-
-**Bonus Challenges**:
-- Create a rainbow gradient (red → orange → yellow → green → blue → purple)
-- Create a horizontal gradient instead of vertical
-- Create a 2D gradient (varies in both directions)
-- Transition between three or more colors
-
-**Hint for Rainbow**: You'll need to use conditional logic to transition between different color pairs in different sections.
-
----
-
-## Advanced Technique: Polar Coordinates
-
-For creating circular patterns, **polar coordinates** are useful:
-
-```python
-import math
-from ipycanvas import Canvas
-
-canvas = Canvas(width=400, height=400)
-
-center_x = 200
-center_y = 200
-radius = 100
-
-canvas.fill_style = '#FF6B35'
-
-# Draw 12 circles in a circular arrangement
-for i in range(12):
-    angle = i * (2 * math.pi / 12)  # Divide circle into 12 parts
-    x = center_x + radius * math.cos(angle)
-    y = center_y + radius * math.sin(angle)
-    canvas.fill_arc(x, y, 15, 0, 2 * math.pi)
-
-canvas
-```
-
-**Polar Coordinates**:
-- `angle` - Direction from center (in radians)
-- `radius` - Distance from center
-- Convert to (x, y) using:
-  - `x = center_x + radius * cos(angle)`
-  - `y = center_y + radius * sin(angle)`
 
 ---
 
@@ -574,6 +447,7 @@ canvas
 Sketch your design on paper first. Mark coordinates and sizes.
 
 ### 2. Use Constants
+<!-- #region -->
 ```python
 # ✅ Good - easy to adjust
 CIRCLE_RADIUS = 20
@@ -583,6 +457,7 @@ SPACING = 50
 canvas.fill_arc(x, y, 20, 0, 2 * math.pi)
 x = x + 50
 ```
+<!-- #endregion -->
 
 ### 3. Build Incrementally
 - Start with one shape
@@ -591,6 +466,7 @@ x = x + 50
 - Then add loops and complexity
 
 ### 4. Comment Your Code
+<!-- #region -->
 ```python
 # Draw the roof triangle
 canvas.begin_path()
@@ -600,6 +476,7 @@ canvas.line_to(320, 180)  # Right edge
 canvas.close_path()
 canvas.fill()
 ```
+<!-- #endregion -->
 
 ---
 
@@ -610,6 +487,7 @@ canvas.fill()
 **Problem**: Circles partially drawn outside canvas
 
 **Solution**: Account for radius in positioning
+<!-- #region -->
 ```python
 # ❌ Circle center at edge - half cut off
 canvas.fill_arc(400, 200, 30, 0, 2*math.pi)
@@ -617,6 +495,7 @@ canvas.fill_arc(400, 200, 30, 0, 2*math.pi)
 # ✅ Circle center accounts for radius
 canvas.fill_arc(370, 200, 30, 0, 2*math.pi)  # 400 - 30 = 370
 ```
+<!-- #endregion -->
 
 ---
 
@@ -625,6 +504,7 @@ canvas.fill_arc(370, 200, 30, 0, 2*math.pi)  # 400 - 30 = 370
 **Problem**: Triangle doesn't point where expected
 
 **Solution**: Visualize coordinates and adjust order
+<!-- #region -->
 ```python
 # For upward-pointing triangle:
 canvas.move_to(200, 50)   # Top point (lowest y)
@@ -633,6 +513,7 @@ canvas.line_to(250, 150)  # Bottom-right (higher y)
 
 # Remember: Y increases downward!
 ```
+<!-- #endregion -->
 
 ---
 
@@ -641,18 +522,21 @@ canvas.line_to(250, 150)  # Bottom-right (higher y)
 **Problem**: Grid pattern looks uneven
 
 **Solution**: Use consistent spacing calculations
+<!-- #region -->
 ```python
 # ✅ Good - consistent formula
 for row in range(rows):
     for col in range(cols):
         x = margin + col * (size + gap)
         y = margin + row * (size + gap)
-```
+```        
+<!-- #endregion -->
 
 ---
 
 ## Quick Reference
 
+<!-- #region -->
 ```python
 # Circles
 canvas.fill_arc(x, y, radius, 0, 2*math.pi)      # Filled circle
@@ -680,6 +564,7 @@ math.pi        # π ≈ 3.14159
 math.cos(angle)  # Cosine
 math.sin(angle)  # Sine
 ```
+<!-- #endregion -->
 
 ---
 
