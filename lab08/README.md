@@ -131,7 +131,6 @@ By the end of this lab, students will be able to:
 1. 🎨 **Simple House** — Draw a house using rectangles and triangles
 2. 🔲 **Checkerboard Pattern** — Create an 8×8 checkerboard using loops
 3. 🎨 **Circle Grid** — Generate a grid of colored circles
-4. 🌈 **Color Gradient** — Create a smooth color gradient using loops
 
 **Estimated Time**: 35 minutes
 
@@ -167,8 +166,6 @@ By the end of this lab, students will be able to:
 **Embedded Exercises:**
 1. 📈 **Temperature Trends** — Plot weekly temperature data as a line chart
 2. 📊 **Grade Distribution** — Create a bar chart showing grade frequencies
-3. 🔵 **Correlation Scatter** — Visualize relationship between study hours and scores
-4. 📉 **Mathematical Functions** — Plot sine and cosine waves on the same chart
 
 **Estimated Time**: 30 minutes
 
@@ -204,11 +201,6 @@ By the end of this lab, students will be able to:
 - Lists and list comprehensions
 - Basic functions
 - Understanding of arrays/lists
-
-### Technical Setup
-- Google account for Colab access
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Basic understanding of running code cells in Colab
 
 ### Installation (will be covered in lab)
 ```python
@@ -376,32 +368,6 @@ for row in range(5):
 
 ---
 
-## Assessment & Success Criteria
-
-Students demonstrate mastery by:
-
-### Conceptual Understanding (30%)
-- ✅ Correctly explain RGB color representation
-- ✅ Understand coordinate systems and pixel positioning
-- ✅ Select appropriate visualization types for different data
-
-### Technical Proficiency (40%)
-- ✅ Successfully complete all 4 ipycanvas exercises
-- ✅ Successfully complete all 4 matplotlib exercises
-- ✅ Use loops effectively to create patterns
-- ✅ Customize colors, labels, and visual properties
-
-### Practical Application (30%)
-- ✅ Complete at least one mini-project from Module 4
-- ✅ Create visually appealing and well-organized graphics
-- ✅ Demonstrate clean code with appropriate comments
-
-### Participation Checkpoints
-- **Mid-lab**: Successfully draw a shape and create a pattern with loops
-- **End-of-lab**: Complete visualization showing data as a chart
-
----
-
 ## Additional Resources
 
 ### Official Documentation
@@ -430,106 +396,6 @@ Students demonstrate mastery by:
 - [Python Graph Gallery](https://www.python-graph-gallery.com/)
 - [From Data to Viz](https://www.data-to-viz.com/)
 - [Creative Coding Challenges](https://www.reddit.com/r/creativecoding/)
-
----
-
-## Troubleshooting
-
-### Issue: ipycanvas installation fails
-**Cause**: Network issues or Colab environment problem
-**Solution**:
-```python
-# Try reinstalling
-!pip uninstall ipycanvas -y
-!pip install ipycanvas --no-cache-dir
-
-# Restart runtime if needed
-# Runtime → Restart runtime
-```
-
-### Issue: Drawings appear blurry
-**Cause**: Canvas size doesn't match display size
-**Solution**: Use clear pixel dimensions and avoid fractional coordinates
-
-### Issue: Matplotlib plots overlap
-**Cause**: Multiple plots in same cell without clearing
-**Solution**:
-```python
-# Clear previous plots
-plt.clf()  # Clear current figure
-
-# Or create new figure explicitly
-plt.figure(figsize=(8, 6))
-plt.plot(x, y)
-plt.show()
-```
-
-### Issue: Colors in hex format don't work
-**Cause**: Missing '#' prefix for hex colors
-**Solution**:
-```python
-# ❌ Wrong
-canvas.fill_style = 'FF0000'
-
-# ✅ Correct
-canvas.fill_style = '#FF0000'
-```
-
----
-
-## Extension Challenges
-
-Once you've completed the core modules, try these advanced challenges:
-
-### 1. Animated Patterns
-- Create multiple canvases showing animation frames
-- Use loops to generate sequential variations
-- Explore motion and transformation
-
-### 2. Interactive Data Visualization
-- Combine ipywidgets (from Lab 07) with matplotlib
-- Create sliders that update chart parameters
-- Build a mini data dashboard
-
-### 3. Fractal Generation
-- Implement recursive drawing patterns
-- Create Sierpinski triangle or Koch snowflake
-- Explore self-similar structures
-
-### 4. Data from APIs
-- Fetch real data from an API (Lab 05 concepts)
-- Visualize API data with matplotlib
-- Create a weather dashboard or stock chart
-
-### 5. Generative Art
-- Use random numbers for organic patterns
-- Implement noise functions for natural textures
-- Create algorithmic art pieces
-
----
-
-## Lab Deliverables
-
-Students should complete and save their Colab notebook with:
-
-### Required Sections
-1. ✅ Setup cell with installations and imports
-2. ✅ Module 2: All 4 ipycanvas exercises completed
-3. ✅ Module 3: All 4 matplotlib exercises completed
-4. ✅ Module 4: At least one mini-project completed
-5. ✅ Each section with clear markdown headers and comments
-
-### Quality Standards
-- Code is well-commented explaining the purpose of each section
-- Graphics are clearly visible and well-composed
-- Charts have proper titles, labels, and legends
-- Notebook runs from top to bottom without errors
-- Personal experimentation and creativity demonstrated
-
-### Submission
-- Share Colab notebook link with instructor
-- Ensure notebook is set to "Anyone with the link can view"
-- Include your name and date at the top of the notebook
 
 ---
 
